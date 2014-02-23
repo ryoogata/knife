@@ -1,0 +1,10 @@
+log_level                <%= node["knife"]["_LOG_LEVEL"] %>
+log_location             <%= node["knife"]["_LOG_LOCATION"] %>
+node_name                '<%= node["knife"]["_NODE_NAME"] %>'
+client_key               '<%= node["knife"]["_CLIENT_KEY"] %>'
+validation_client_name   '<%= node["knife"]["_VALIDATION_CLIENT_NAME"] %>'
+validation_key           '<%= node["knife"]["_VALIDATION_KEY"] %>'
+chef_server_url          '<%= node["knife"]["_CHEF_SERVER_URL"] %>'
+syntax_check_cache_path  '<%= node["knife"]["_SYNTAX_CHECK_CACHE_PATH"] %>'
+knife[:solo_path] = '<%= node["knife"]["_SOLO_PATH"] %>'
+cookbook_path ["<%= node["knife"]["_COOKBOOK_PATH"].join('", "') %>"]
