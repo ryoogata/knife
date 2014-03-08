@@ -8,3 +8,5 @@ chef_server_url          '<%= node["knife"]["_CHEF_SERVER_URL"] %>'
 syntax_check_cache_path  '<%= node["knife"]["_SYNTAX_CHECK_CACHE_PATH"] %>'
 knife[:solo_path] = '<%= node["knife"]["_SOLO_PATH"] %>'
 cookbook_path ["<%= node["knife"]["_COOKBOOK_PATH"].join('", "') %>"]
+role_path '<%= node["knife"]["_ROLE_PATH"]%>'
+data_bag_path '<%= node["knife"]["_DATA_BAG_PATH"]%>'
