@@ -1,0 +1,20 @@
+---
+driver_plugin: docker
+driver_config:
+  require_chef_omnibus: true
+
+platforms:
+- name: ubuntu
+  driver_config:
+    image: ubuntu:13.04
+- name: centos-6.4
+  driver_config:
+    image: centos:6.4
+  run_list:
+
+suites:
+- name: default
+  run_list:
+  - recipe[build-essential]
+  - recipe[knife::setup_knifesolo]
+  attributes:
