@@ -8,5 +8,7 @@ default["knife"]["_CHEF_SERVER_URL"] = "https://localhost:443"
 default["knife"]["_SYNTAX_CHECK_CACHE_PATH"] = "/root/.chef/syntax_check_cache"
 default["knife"]["_SOLO_PATH"] = "/tmp"
 default["knife"]["_COOKBOOK_PATH"] = %w{/vagrant/chef-repo/site-cookbooks /vagrant/chef-repo/cookbooks}
+default["knife"]["_COOKBOOK_EMAIL"] = "cookbooks@yourcompany.com"
+default["knife"]["_COOKBOOK_COPYRIGHT"] = "Your Company, Inc."
 default["knife"]["_ROLE_PATH"] = "/vagrant/chef-repo/roles"
 default["knife"]["_DATA_BAG_PATH"] = "/vagrant/chef-repo/data_bags"
