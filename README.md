@@ -1,5 +1,7 @@
 knife Cookbook
 ==============
+[![Build Status](https://travis-ci.org/ryoogata/knife.svg?branch=master)](https://travis-ci.org/ryoogata/knife)
+
 TODO: Enter the cookbook description here.
 
 e.g.
