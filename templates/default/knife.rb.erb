@@ -7,6 +7,11 @@ validation_key           '<%= node["knife"]["_VALIDATION_KEY"] %>'
 chef_server_url          '<%= node["knife"]["_CHEF_SERVER_URL"] %>'
 syntax_check_cache_path  '<%= node["knife"]["_SYNTAX_CHECK_CACHE_PATH"] %>'
 knife[:solo_path] = '<%= node["knife"]["_SOLO_PATH"] %>'
-cookbook_path ["<%= node["knife"]["_COOKBOOK_PATH"].join('", "') %>"]
+cookbook_path [<%= node["knife"]["_COOKBOOK_PATH"]%>]
+cookbook_email "<%= node["knife"]["_COOKBOOK_EMAIL"]%>"
+cookbook_copyright "<%= node["knife"]["_COOKBOOK_COPYRIGHT"]%>"
 role_path '<%= node["knife"]["_ROLE_PATH"]%>'
 data_bag_path '<%= node["knife"]["_DATA_BAG_PATH"]%>'
+encrypted_data_bag_secret "<%= node["knife"]["_DATA_BAG_SECRET_PATH"]%>"
+knife[:editor] = "<%= node["knife"]["_EDITOR_PATH"]%>"
+
