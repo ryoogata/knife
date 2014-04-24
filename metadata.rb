@@ -59,7 +59,7 @@ attribute "knife/_CLIENT_KEY",
   ]
 
 attribute "knife/_VALIDATION_CLIENT_NAME",
-  :display_name => "The name of the server that–along with the validation_key–is used to determine whether a chef-client may register with a Chef server.",
+  :display_name => "The name of the server that along with the validation_key is used to determine whether a chef-client may register with a Chef server.",
   :description => "",
   :default => "/root/.chef/chefsolo.pem",
   :required => "optional",
