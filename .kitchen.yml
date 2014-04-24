@@ -19,4 +19,4 @@ suites:
   - recipe[knife::setup_knifesolo]
   attributes:
     knife:
-      _COOKBOOK_PATH: '/vagrant/chef-repo/site-cookbooks, /vagrant/chef-repo/cookbooks'
+      _COOKBOOK_PATH: ['/vagrant/chef-repo/site-cookbooks, /vagrant/chef-repo/cookbooks']
