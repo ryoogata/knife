@@ -26,10 +26,12 @@ end
   end
 end
 
-directory "#{node['knife']['_CONFIG_DIR']}/.chef" do
+directory "/home/#{node['knife']['_KNIFE_USER']}/.chef" do
+  owner "#{node['knife']['_KNIFE_USER']}"
   action :create
 end
 
-template "#{node['knife']['_CONFIG_DIR']}/.chef/knife.rb" do
+template "/home/#{node['knife']['_CONFIG_DIR']}/.chef/knife.rb" do
+  owner "#{node['knife']['_KNIFE_USER']}"
   source "knife.rb.erb"
 end
