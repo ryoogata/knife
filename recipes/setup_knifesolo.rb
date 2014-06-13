@@ -26,7 +26,7 @@ end
   end
 end
 
-directory "#{node['knife']['_CONFIG_DIR']/.chef}" do
+directory "#{node['knife']['_CONFIG_DIR']}/.chef" do
   action :create
 end
 
