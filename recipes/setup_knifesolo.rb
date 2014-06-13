@@ -26,10 +26,10 @@ end
   end
 end
 
-directory node['knife']['_CONFIG_DIR'] do
+directory "#{node['knife']['_CONFIG_DIR']}" do
   action :create
 end
 
-template node['knife']['_CONFIG_DIR']/knife.rb do
+template "#{node['knife']['_CONFIG_DIR']/knife.rb}" do
   source "knife.rb.erb"
 end
