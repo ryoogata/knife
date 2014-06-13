@@ -31,7 +31,7 @@ directory "/home/#{node['knife']['_KNIFE_USER']}/.chef" do
   action :create
 end
 
-template "/home/#{node['knife']['_CONFIG_DIR']}/.chef/knife.rb" do
+template "/home/#{node['knife']['_KNIFE_USER']}/.chef/knife.rb" do
   owner "#{node['knife']['_KNIFE_USER']}"
   source "knife.rb.erb"
 end
