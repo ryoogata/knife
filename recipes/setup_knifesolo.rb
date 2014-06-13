@@ -11,6 +11,10 @@ when "ubuntu"
   package "ruby-dev" do
     action :install
   end
+when "amazon"
+  package "ruby-devel" do
+    action :install
+  end
 end
 
 %w{
