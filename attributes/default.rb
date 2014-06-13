@@ -1,4 +1,4 @@
-default["knife"]["_CONFIG_DIR"] = "/home/ec2-user"
+default["knife"]["_KNIFE_USER"] = "ec2-user"
 default["knife"]["_LOG_LEVEL"] = ":info"
 default["knife"]["_LOG_LOCATION"] = "STDOUT"
 default["knife"]["_NODE_NAME"] = "chefsolo"
