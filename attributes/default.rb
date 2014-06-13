@@ -1,3 +1,4 @@
+default["knife"]["_CONFIG_DIR"] = "/home/ec2-user"
 default["knife"]["_LOG_LEVEL"] = ":info"
 default["knife"]["_LOG_LOCATION"] = "STDOUT"
 default["knife"]["_NODE_NAME"] = "chefsolo"
@@ -7,7 +8,7 @@ default["knife"]["_VALIDATION_KEY"] = "/etc/chef-server/chef-validator.pem"
 default["knife"]["_CHEF_SERVER_URL"] = "https://localhost:443"
 default["knife"]["_SYNTAX_CHECK_CACHE_PATH"] = "/root/.chef/syntax_check_cache"
 default["knife"]["_SOLO_PATH"] = "/tmp"
-default["knife"]["_COOKBOOK_PATH"] = "/vagrant/chef-repo/site-cookbooks, /vagrant/chef-repo/cookbooks"
+default["knife"]["_COOKBOOK_PATH"] = %w{/vagrant/chef-repo/site-cookbooks /vagrant/chef-repo/cookbooks}
 default["knife"]["_COOKBOOK_EMAIL"] = "cookbooks@yourcompany.com"
 default["knife"]["_COOKBOOK_COPYRIGHT"] = "Your Company, Inc."
 default["knife"]["_ROLE_PATH"] = "/vagrant/chef-repo/roles"
