@@ -26,12 +26,28 @@ end
   end
 end
 
-directory "/home/#{node['knife']['_KNIFE_USER']}/.chef" do
-  owner "#{node['knife']['_KNIFE_USER']}"
-  action :create
+case node['platform']
+when "centos"
+  directory "/#{node['knife']['_KNIFE_USER']}/.chef" do
+    owner "#{node['knife']['_KNIFE_USER']}"
+    action :create
+  end
+when "amazon"
+  directory "/home/#{node['knife']['_KNIFE_USER']}/.chef" do
+    owner "#{node['knife']['_KNIFE_USER']}"
+    action :create
+  end
 end
 
-template "/home/#{node['knife']['_KNIFE_USER']}/.chef/knife.rb" do
-  owner "#{node['knife']['_KNIFE_USER']}"
-  source "knife.rb.erb"
+case node['platform']
+when "centos"
+  template "/#{node['knife']['_KNIFE_USER']}/.chef/knife.rb" do
+    owner "#{node['knife']['_KNIFE_USER']}"
+    source "knife.rb.erb"
+  end
+when "amazon"
+  template "/home/#{node['knife']['_KNIFE_USER']}/.chef/knife.rb" do
+    owner "#{node['knife']['_KNIFE_USER']}"
+    source "knife.rb.erb"
+  end
 end
